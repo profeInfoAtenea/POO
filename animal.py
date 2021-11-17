@@ -1,38 +1,49 @@
 class Animal:
-    """Clase padre Animal"""
     def __init__(self, especie, edad):
         self.especie = especie
         self.edad = edad
-    #Método genérico pero con implementación particular
+
+    # Método genérico pero con implementación particular
     def hablar(self):
-        #Metodo vacio
+        # Método vacío
         pass
-    
-    #Método genérico pero con implementación particular
+
+    # Método genérico pero con implementación particular
     def moverse(self):
-        #Metodo vacio
+        # Método vacío
         pass
-    
+
+    # Método genérico con la misma implementación
     def describeme(self):
-        print("Soy un Animal del tipo  ", type(self.__name__))
+        print("Soy un Animal del tipo", type(self).__name__)
 
 class Perro(Animal):
+    
     def hablar(self):
-        print("Guau")
+        print("Guau!")
     def moverse(self):
-        print("Caminando a 4 patas")
+        print("Caminando con 4 patas")
 
-def Vaca(Animal):
+class Vaca(Animal):
     def hablar(self):
         print("Muuu!")
     def moverse(self):
         print("Caminando con 4 patas")
 
-def Abeja(Animal):
+class Abeja(Animal):
+
     def hablar(self):
-        print("Bzzzzz")
+        print("Bzzzz!")
     def moverse(self):
         print("Volando")
-    #Nuevo método
+
+    # Nuevo método
     def picar(self):
         print("Picar!")
+    
+p = Perro("Mastin", 10)
+p.describeme()
+p.moverse()
+
+v = Vaca("Norte", 3)
+v.hablar()
