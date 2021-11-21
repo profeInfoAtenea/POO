@@ -1,7 +1,10 @@
 class Animal:
     def __init__(self, especie, edad):
-        self.especie = especie
-        self.edad = edad
+        self.__especie = especie
+        self.__edad = edad
+    
+    def __str__(self):
+        return ("Especie: {0}, Edad: {1}".format(self.__especie, self.__edad))
 
     # Método genérico pero con implementación particular
     def hablar(self):
@@ -47,3 +50,5 @@ p.moverse()
 
 v = Vaca("Norte", 3)
 v.hablar()
+
+print(str(p))
