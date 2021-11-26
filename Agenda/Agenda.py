@@ -1,31 +1,32 @@
 class Agenda:
+    """Clase Agenda que gestiona listado de Contacto"""
     def __init__(self):
         self.__contactos = []
         self.__abierta = False
     
-    def agregarContacto(self, contacto):
+    def agregar_contacto(self, contacto):
         self.__contactos.append(contacto)
     
-    def listarContacto(self):
+    def listar_contacto(self):
        for c in self.__contactos:
            print(str(c))
 
-    def buscarContacto(self):
+    def buscar_contacto(self):
         pass
 
-    def editarContacto(self):
+    def editar_contacto(self):
         pass
 
-    def cerrarAgenda(self):
+    def cerrar_agenda(self):
        self.__abierta = False
 
-    def abrirAgenda(self):
+    def abrir_agenda(self):
         self.__abierta = True
         while( self.__abierta):
-            self.__muestraMenu()
-            self.__leerOpcion()
+            self.__muestra_menu()
+            self.__leer_opcion()
     
-    def __muestraMenu(self):
+    def __muestra_menu(self):
         print("------ SELECCIONA OPCIÓN ------")
         print("| 1.- Listar Contacto: ")
         print("| 2.- Buscar Contacto: ")
@@ -33,7 +34,7 @@ class Agenda:
         print("| 4.- Cerrar Agenda: ")
         print("-----------------------")
     
-    def __leerOpcion(self):
+    def __leer_opcion(self):
         try:
             opcion = -1
             while((opcion > 4) or (opcion < 1)):
@@ -42,9 +43,9 @@ class Agenda:
             print("Error")
         
         if(opcion == 1):
-            self.listarContacto()
+            self.listar_contacto()
         elif(opcion == 2 ):
             pass
         elif(opcion == 4 ):
-            self.cerrarAgenda()
+            self.cerrar_agenda()
         
