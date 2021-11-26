@@ -1,4 +1,5 @@
 class Contacto:
+    """Clase Contacto que guarda información: nombre, telefono y email"""
     def __init__(self, nombre, telefono, email):
         self.__nombre = nombre
         self.__telefono = telefono
@@ -26,7 +27,6 @@ class Contacto:
         
 '''
 c1 = Contacto("manuel", "666.666.666", "c1@email.test")
-
 c1.nombre = "Lucia"
 c1.set_telefono("777")
 print(str(c1))
