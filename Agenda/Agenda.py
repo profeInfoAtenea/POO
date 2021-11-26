@@ -9,12 +9,13 @@ class Agenda:
         self.__contactos.append(contacto)
     
     def listar_contacto(self):
-        """Listarla lista de Contacto """
        for c in self.__contactos:
            print(str(c))
 
-    def buscar_contacto(self):
-        pass
+    def buscar_contacto(self, nombre):
+        for c in self.__contactos:
+            if(c.get_nombre() == nombre):
+                return c
 
     def editar_contacto(self):
         pass
@@ -49,7 +50,7 @@ class Agenda:
         if(opcion == 1):
             self.listar_contacto()
         elif(opcion == 2 ):
-            pass
+            print(self.buscar_contacto("Manuel"))
         elif(opcion == 4 ):
             self.cerrar_agenda()
         
