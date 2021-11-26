@@ -5,9 +5,11 @@ class Agenda:
         self.__abierta = False
     
     def agregar_contacto(self, contacto):
+        """Agrega un Contacto a una lista"""
         self.__contactos.append(contacto)
     
     def listar_contacto(self):
+        """Listarla lista de Contacto """
        for c in self.__contactos:
            print(str(c))
 
@@ -27,6 +29,7 @@ class Agenda:
             self.__leer_opcion()
     
     def __muestra_menu(self):
+        """Muestra las opciones disponibles"""
         print("------ SELECCIONA OPCIÓN ------")
         print("| 1.- Listar Contacto: ")
         print("| 2.- Buscar Contacto: ")
@@ -35,6 +38,7 @@ class Agenda:
         print("-----------------------")
     
     def __leer_opcion(self):
+        """ Función auxiliar para leer datos del Usuario"""
         try:
             opcion = -1
             while((opcion > 4) or (opcion < 1)):
